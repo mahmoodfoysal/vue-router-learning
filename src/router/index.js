@@ -12,12 +12,16 @@ const routes = [
     },
     {
         path: '/products', name: 'Products', component: () => import('/src/components/Products/Products.vue')
+    },
+    {
+        path: '/faq', name:'FAQ', component: () => import('/src/components/FAQ/FAQ.vue')
     }
 ]
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    linkActiveClass: 'active-links'
 })
 
 export default router
